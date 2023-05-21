@@ -139,7 +139,7 @@ export default class EditForm {
   #element = null;
   #oneWaypoint = null;
 
-  constructor({oneWaypoint}) {
+  constructor(oneWaypoint) {
     this.#oneWaypoint = oneWaypoint;
   }
 
