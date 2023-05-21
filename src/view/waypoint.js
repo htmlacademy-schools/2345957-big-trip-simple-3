@@ -3,8 +3,8 @@ import {getDestinationByID} from '../mock/destination';
 import {getDateDayAndMo, getDateWithoutT, getDateWithT, getTime} from '../utils';
 import {getOfferById} from '../mock/offers';
 
-function createOffersTemplate(offerIds, type){
-  return offerIds.map((offerId)=>{
+function createOffersTemplate(offerIds, type) {
+  return offerIds.map((offerId) => {
     const oneOffer = getOfferById(type, offerId);
     return `<li class="event__offer">
           <span class="event__offer-title">${oneOffer.title}</span>
@@ -47,20 +47,23 @@ function createWaypointTemplate(oneWaypoint) {
 }
 
 export default class WaypointView {
-  constructor({oneWaypoint}) {
-    this.oneWaypoint = oneWaypoint;
+  #element = null;
+  #oneWaypoint = null;
+
+  constructor(oneWaypoint) {
+    this.#oneWaypoint = oneWaypoint;
   }
 
-  getTemplate() {
-    return createWaypointTemplate(this.oneWaypoint);
+  get template() {
+    return createWaypointTemplate(this.#oneWaypoint);
   }
 
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
+  get element() {
+    if (!this.#element) {
+      this.#element = createElement(this.template);
     }
 
-    return this.element;
+    return this.#element;
   }
 
   removeElement() {
