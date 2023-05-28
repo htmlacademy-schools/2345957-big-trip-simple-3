@@ -11,6 +11,7 @@ import {destinations} from './mock/destination';
 const siteHeaderElement = document.querySelector('.trip-controls__filters');
 const container = document.querySelector('.trip-events');
 
+//сделала 6_2 в 6_1
 mockInit(3, 10);
 const modelWaypoints = new ModelWaypoint(waypoints);
 const modelOffers = new ModelOffers(offersByType);
