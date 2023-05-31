@@ -5,19 +5,10 @@ const EVENT_DATE_FORMAT = 'MMM D';
 const EVENT_TIME_FORMAT = 'H:mm';
 const EVENT_YEARS_FORMAT = 'DD/MM/YY HH:mm';
 
-const getRandomItemFromItems = (items) => items[Math.floor(Math.random() * items.length)];
-
-const getRandomPrice = () => Math.floor(Math.random() * 100000) + 777;
-
 const getRandomSliceFromItems = (items) => {
   const n = Math.floor(Math.random() * (items.length + 1));
   const shuffled = [...items].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, n);
-};
-
-const createIDgenerator = () => {
-  let id = 0;
-  return () => ++id;
 };
 
 const isEsc = (evt) => evt.key === 'Escape';
@@ -46,10 +37,7 @@ const filter = {
 };
 
 export {
-  getRandomItemFromItems,
-  getRandomPrice,
   getRandomSliceFromItems,
-  createIDgenerator,
   getDateWithoutT,
   getDateDayAndMo,
   getDateWithT,
