@@ -1,5 +1,5 @@
 import Observable from '../framework/observable';
-import {UpdateType} from '../mock/const';
+import {UpdateType} from '../const';
 
 export default class ModelWaypoint extends Observable {
   #waypointsApiService = null;

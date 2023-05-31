@@ -3,7 +3,7 @@ import {makeFirstLetterUpperCase} from '../utils';
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.css';
 import AbstractStatefulView from '../framework/view/abstract-stateful-view';
-import {pointTypes} from '../mock/const';
+import {pointTypes} from '../const';
 import he from 'he';
 
 const BLANK_WAYPOINT = {
